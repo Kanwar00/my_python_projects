@@ -5,7 +5,7 @@ from hangman_words import word_list
 print(logo)
 word_guess=random.choice(word_list)
 word_length=len(word_guess)
-print(word_guess)
+# print(word_guess)
 placeholder=""
 for i in range(word_length):
     placeholder+="_"
@@ -28,6 +28,7 @@ while not game_over:
         print("You guessed a wrong letter. You lost a life")
         print(f"You have {lives} lives left")
         if lives == 0:
+            print(f"The word was {word_guess}")
             print("You lost all your lives. Game Over")
             game_over = True
 
